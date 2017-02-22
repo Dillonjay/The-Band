@@ -6,18 +6,23 @@ class SongList extends React.Component {
 	render() {
 		return (
 			<ul>
-				<li>blah</li>
-				<li>blah</li>
-				<li>blah</li>
+				{this.showSongList(this.props.songs)}
 			</ul>
 		)
+	}
+	showSongList(songs) {
+		return songs.map(function(song,i) {
+			return (
+					<li key={i}>{song.title}</li>
+				)
+		})
 	}
 };
 
 function mapStateToProps(state) {
 	return { 
 		songs : state.songs 
-	};
+	}; 
 };
 
 export default connect(mapStateToProps)(SongList);
