@@ -5,4 +5,4 @@ const allReducers = combineReducers({
 	songs : songs
 })
 
-module.exports = allReducers;
+export default allReducers;
