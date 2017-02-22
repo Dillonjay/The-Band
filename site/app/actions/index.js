@@ -1,7 +1,7 @@
 export function selectSong(song) {
 	console.log('song clicked:', song.title)
 	return {
-		type: "Song_Selected",
+		type: "SONG_SELECTED",
 		payload: song
 	}
 };
