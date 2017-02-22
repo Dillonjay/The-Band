@@ -1,8 +1,9 @@
-import ReactDOM from 'react-dom';
-
 import React from 'react';
-
+import { render } from 'react-dom';
+import { createStore } from 'redux';
 import App from './app.js';
-console.log('apppp', app)
 
-ReactDOM.render(<App />, document.getElementById('app'));
+const store = createStore();
+
+
+render(<App />, document.getElementById('app'));
