@@ -8,6 +8,13 @@ export default function() {
 			song: 'somesonglocation'
 		},
 		{
+			title: 'Walk The Line',
+			artist: 'J Cahsh',
+			genre: 'hip hop',
+			video_url:'blahblahblah',
+			song: 'somesonglocation'
+		},
+		{
 			title: 'aint nuthin but a g thing',
 			artist: 'dr dre',
 			genre: 'hip hop',
