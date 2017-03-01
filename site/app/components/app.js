@@ -1,7 +1,7 @@
 import React from 'react';
-import SongList from '../containers/songs_list.js';
-import SongDetails from '../containers/song_details.js';
-import AddSong from '../containers/add_song.js';
+import SongList from '../containers/songs_list';
+import SongDetails from '../containers/song_details';
+import AddSong from '../containers/add_song';
 
 const App = () => (
 	<div>
