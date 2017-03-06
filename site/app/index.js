@@ -7,7 +7,7 @@ import reducers from './reducers/index';
 
 const store = createStore(reducers); 
 
-console.log('some sort of state my friend', store.getState())
+console.log('do YOu re render bruh??', store.getState())
 
 
 render(
