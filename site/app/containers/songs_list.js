@@ -1,7 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { selectSong } from '../actions/index.js';
+import { selectSong } from '../actions/index';
 
 class SongList extends React.Component {
 	render() {
@@ -26,6 +26,7 @@ class SongList extends React.Component {
 };
 
 function mapStateToProps(state) {
+	console.log('here is the state in side of song_list',state)
 	return { 
 		songs : state.songs 
 	}; 

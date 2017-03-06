@@ -4,7 +4,7 @@ import activeSongReducer from './active_song_reducer'
 
 const allReducers = combineReducers({
 	songs: songs,
-	activeSong: activeSongReducer 
+	activeSong: activeSongReducer
 })
 
 export default allReducers;

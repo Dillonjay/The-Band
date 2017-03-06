@@ -1,32 +1,9 @@
-export default function() {
-	return [
-		{
-			title: 'T Shirt',
-			artist: 'Migos',
-			genre: 'hip hop',
-			video_url:'blahblahblah',
-			song: 'somesonglocation'
-		},
-		{
-			title: 'Walk The Line',
-			artist: 'J Cahsh',
-			genre: 'hip hop',
-			video_url:'blahblahblah',
-			song: 'somesonglocation'
-		},
-		{
-			title: 'aint nuthin but a g thing',
-			artist: 'dr dre',
-			genre: 'hip hop',
-			video_url:'blahblahblah',
-			song: 'somesonglocation'
-		},
-		{
-			title: 'Crew love',
-			artist: 'The weekend',
-			genre: 'pop',
-			video_url:'blahblahblah',
-			song: 'somesonglocation'
-		}
-	]
+export default function(state=[{artist: "JAY Z", genre: "rap", title:"big Pimpin"}], action) {
+	console.log('we are here in the songs_reducer... State', state)
+	switch(action.type) {
+		case 'ADD_SONG':
+			state = [...state, action.payload];
+			break;
+	}
+	return state;
 }

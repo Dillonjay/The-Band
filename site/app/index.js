@@ -7,6 +7,8 @@ import reducers from './reducers/index';
 
 const store = createStore(reducers); 
 
+console.log('some sort of state my friend', store.getState())
+
 
 render(
 	<Provider store={ store }>
