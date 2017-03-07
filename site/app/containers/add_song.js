@@ -2,10 +2,13 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { addSong } from '../actions/add_song_action.js';
+
+
 class AddSong extends React.Component {
 	render() {
 		return (
 			<div>
+				<h2>{ this.props.name }</h2>
 				<form onSubmit={(e) => {
 					e.preventDefault()
 					this.props.addSong({title: "saaahdude", artist:"dillon", genre:"rap"})
@@ -17,6 +20,15 @@ class AddSong extends React.Component {
 		)
 	}
 };
+
+AddSong.propTypes = {
+	name: React.PropTypes.string,
+	addSong: React.PropTypes.func
+}
+
+AddSong.defaultProps = {
+	name: 'Dillon'
+}
 
 function mapStateToProps(state) {
 	return { 
