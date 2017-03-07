@@ -25,6 +25,11 @@ class SongList extends React.Component {
 	}
 };
 
+SongList.propTypes = {
+	selectSong: React.PropTypes.func.isRequired,
+	songs: React.PropTypes.array.isRequired
+}
+
 function mapStateToProps(state) {
 	console.log('here is the state in side of song_list',state)
 	return { 

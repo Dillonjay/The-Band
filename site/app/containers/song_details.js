@@ -10,11 +10,13 @@ class SongDetails extends React.Component {
 				<div></div>
 			)
 		}
+		const { title, artist, genre } = this.props.song;
+		
 		return (
 			<div>
-				<h1>{this.props.song.title}</h1>	
-				<h2>{this.props.song.artist}</h2>
-				<h3>{this.props.song.genre}</h3>
+				<h1>{title}</h1>	
+				<h2>{artist}</h2>
+				<h3>{genre}</h3>
 			</div>
 		)
 	}
