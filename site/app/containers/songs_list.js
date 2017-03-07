@@ -2,6 +2,7 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { selectSong } from '../actions/index';
+const { arrayOf, shape, string, func, isRequired } = React.PropTypes;
 
 class SongList extends React.Component {
 	render() {
@@ -26,8 +27,12 @@ class SongList extends React.Component {
 };
 
 SongList.propTypes = {
-	selectSong: React.PropTypes.func.isRequired,
-	songs: React.PropTypes.array.isRequired
+	selectSong: func.isRequired,
+	songs: arrayOf(shape({
+		title: string,
+		genre: string,
+		artist: string
+	}))
 }
 
 function mapStateToProps(state) {
