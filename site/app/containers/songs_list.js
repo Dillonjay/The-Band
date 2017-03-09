@@ -2,7 +2,6 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { selectSong } from '../actions/index';
-const { arrayOf, shape, string, func, isRequired } = React.PropTypes;
 
 class SongList extends React.Component {
 	render() {
@@ -25,6 +24,8 @@ class SongList extends React.Component {
 		})
 	}
 };
+
+const { arrayOf, shape, string, func, isRequired } = React.PropTypes;
 
 SongList.propTypes = {
 	selectSong: func.isRequired,

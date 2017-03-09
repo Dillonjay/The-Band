@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-const { shape, string } = React.PropTypes;
 
 
 
@@ -22,6 +21,8 @@ class SongDetails extends React.Component {
 		)
 	}
 };
+
+const { shape, string } = React.PropTypes;
 
 SongDetails.propTypes = {
 	song: shape({

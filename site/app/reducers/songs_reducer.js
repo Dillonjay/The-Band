@@ -4,6 +4,9 @@ export default function(state=[{artist: "JAY Z", genre: "rap", title:"big Pimpin
 		case 'ADD_SONG':
 			state = [...state, action.payload];
 			break;
+		case 'DELETE_SONG':
+			state = state.filter(song => song !== action.payload);
+			break;
 	}
 	return state;
 }

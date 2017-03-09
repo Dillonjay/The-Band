@@ -21,9 +21,11 @@ class AddSong extends React.Component {
 	}
 };
 
+const { string, func, isRequired } = React.PropTypes;
+
 AddSong.propTypes = {
-	name: React.PropTypes.string,
-	addSong: React.PropTypes.func
+	name: string,
+	addSong: func.isRequired
 }
 
 AddSong.defaultProps = {
@@ -39,5 +41,5 @@ function mapStateToProps(state) {
 function matchDispatchToProps(dispatch) {
 	return bindActionCreators({ addSong: addSong }, dispatch)
 }
-
 export default connect(mapStateToProps, matchDispatchToProps)(AddSong);
+
