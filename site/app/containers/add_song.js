@@ -1,7 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { addSong } from '../actions/add_song_action.js';
+import { addSong } from '../actions/song_actions';
 
 
 class AddSong extends React.Component {

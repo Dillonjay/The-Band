@@ -1,7 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { selectSong } from '../actions/index';
+import { selectSong } from '../actions/select_song_action';
 
 class SongList extends React.Component {
 	render() {
