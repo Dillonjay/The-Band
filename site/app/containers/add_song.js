@@ -39,7 +39,8 @@ function mapStateToProps(state) {
 };
 
 function matchDispatchToProps(dispatch) {
-	return bindActionCreators({ addSong: addSong }, dispatch)
+	return bindActionCreators({ addSong }, dispatch)
 }
+
 export default connect(mapStateToProps, matchDispatchToProps)(AddSong);
 
