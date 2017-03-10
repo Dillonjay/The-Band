@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { bindActionCreators } from 'redux';
+import AddSong from './add_song'
 import { connect } from 'react-redux';
 import { selectSong } from '../actions/select_song_action';
 import  bang from '../actions/bang.js'
@@ -9,6 +10,7 @@ class SongList extends React.Component {
 	render() {
 		return (
 			<div>
+				<AddSong />
 				<ul>
 					{this.showSongList()}
 				</ul>

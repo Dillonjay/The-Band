@@ -12,7 +12,7 @@ module.exports = {
 	devServer: {
 		inline: true,
 		port: process.env.PORT,
-		contentBase: paths.app
+		historyApiFallback: true
 	},
 	resolve: {
     extensions: ['.js', '.jsx']
