@@ -12,10 +12,11 @@ import SongDetails from './containers/song_details';
 	  render () {
 	    return (
 	    	<BrowserRouter>
-	    	<Provider store={store}>
-	          <div className='app'>
-	            <Match exactly pattern='/' component={SongList} />
-	          </div>
+	    		<Provider store={store}>
+	          	<div>
+	            	<Match exactly pattern='/' component={SongList} />
+	            	<Match pattern='/hello' component={SongDetails} />
+	          	</div>
 	          </Provider>
 	      </BrowserRouter>
 	    )

@@ -4,12 +4,15 @@ import { bindActionCreators } from 'redux';
 import AddSong from './add_song'
 import { connect } from 'react-redux';
 import { selectSong } from '../actions/select_song_action';
+import {  Link } from 'react-router';
 import  bang from '../actions/bang.js'
 
 class SongList extends React.Component {
 	render() {
 		return (
 			<div>
+				<button onClick={this.goToDetails.bind(this)}>Async call with redux boyyyy</button>
+
 				<AddSong />
 				<ul>
 					{this.showSongList()}
@@ -18,21 +21,30 @@ class SongList extends React.Component {
 			</div>
 		)
 	}
+	goToDetails (event) {
+    	event.preventDefault()
+    	this.context.router.transitionTo('/hello')
+ 	 }
 	showSongList(songs) {
 		return this.props.songs.map((song,i) => {
 			return (
 					<li 
 					key={i}
 					onClick={() => this.props.selectSong(song)}
-					>
-						{song.title}
+					>	
+						<Link to='hello'>
+							{song.title}
+						</Link>
 					</li>
 				)
 		})
 	}
 };
+const { arrayOf, shape, string, func, isRequired, array, object } = React.PropTypes;
 
-const { arrayOf, shape, string, func, isRequired, array } = React.PropTypes;
+SongList.contextTypes = {
+    router: object
+}
 
 SongList.propTypes = {
 	selectSong: func.isRequired,
