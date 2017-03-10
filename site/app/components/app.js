@@ -10,7 +10,6 @@ const App = () => (
 		<h1>Songs: </h1>
 		<SongList />
 		<hr/>
-		<SongDetails />
 	</div>
 )
 
