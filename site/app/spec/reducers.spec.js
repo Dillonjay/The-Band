@@ -1,4 +1,3 @@
-/* jest */
 
 // Going to test action creators here as well. Good idea. I think so. 
 
