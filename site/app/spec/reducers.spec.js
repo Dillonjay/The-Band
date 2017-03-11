@@ -2,9 +2,9 @@
 
 // Going to test action creators here as well. Good idea. I think so. 
 
-import reducers from '../app/reducers/index';
-import { selectSong } from '../app/actions/select_song_action';
-import { addSong } from '../app/actions/song_actions';
+import reducers from '../reducers/index';
+import { selectSong } from '../actions/select_song_action';
+import { addSong } from '../actions/song_actions';
 
 
 test('SELECT_SONG', () => {

@@ -5,4 +5,4 @@ export function selectSong(song) {
 		type: SELECT_SONG,
 		payload: song
 	}
-};
+}

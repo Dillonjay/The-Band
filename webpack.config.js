@@ -23,16 +23,22 @@ module.exports = {
 		filename: 'bundle.js'
 	},
 	module: {
-		loaders: [
+		rules: [
+			{
+        		enforce: "pre",
+        		test: /\.js$/,
+        		loader: "eslint-loader",
+        		exclude: /node_modules/
+      		},
 			{
 				test: /\.jsx?$/,
 				loader: 'babel-loader',
-				include: paths.app
+				exclude: /node_modules/
 			},
 			{
 				test: /\.css/,
 				loaders: ['style-loader', 'css-loader'],
-				include: paths.app
+				exclude: /node_modules/
 			}
 		]
 	},

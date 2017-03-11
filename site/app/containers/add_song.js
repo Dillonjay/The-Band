@@ -5,41 +5,41 @@ import { addSong } from '../actions/song_actions';
 
 
 class AddSong extends React.Component {
-	render() {
-		return (
-			<div>
-				<h2>{ this.props.name }</h2>
-				<form onSubmit={(e) => {
-					e.preventDefault()
-					this.props.addSong({title: "saaahdude", artist:"dillon", genre:"rap"})
-				}}>
-					<input></input>
-					<button type="submit">Add</button>
-				</form>
-			</div>
-		)
-	}
-};
+    render() {
+        return (
+            <div>
+                <h2>{ this.props.name }</h2>
+                <form onSubmit={(e) => {
+                    e.preventDefault()
+                    this.props.addSong({title: "saaahdude", artist:"dillon", genre:"rap"})
+                }}>
+                    <input></input>
+                    <button type="submit">Add</button>
+                </form>
+            </div>
+        )
+    }
+}
 
-const { string, func, isRequired } = React.PropTypes;
+const { string, func } = React.PropTypes;
 
 AddSong.propTypes = {
-	name: string,
-	addSong: func.isRequired
+    name: string.isRequired,
+    addSong: func.isRequired
 }
 
 AddSong.defaultProps = {
-	name: 'Dillon'
+    name: 'Dillon'
 }
 
 function mapStateToProps(state) {
-	return { 
-		songs : state.songs 
-	}; 
-};
+    return { 
+        songs : state.songs 
+    }; 
+}
 
 function matchDispatchToProps(dispatch) {
-	return bindActionCreators({ addSong }, dispatch)
+    return bindActionCreators({ addSong }, dispatch)
 }
 
 export default connect(mapStateToProps, matchDispatchToProps)(AddSong);
