@@ -52,7 +52,7 @@ SongList.propTypes = {
         genre: string,
         artist: string
     })),
-    data: array
+    data: array.isRequired
 }
 
 function mapStateToProps(state) {

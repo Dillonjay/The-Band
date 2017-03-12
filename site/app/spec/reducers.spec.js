@@ -1,10 +1,14 @@
-
 // Going to test action creators here as well. Good idea. I think so. 
 
 import reducers from '../reducers/index';
 import { selectSong } from '../actions/select_song_action';
 import { addSong } from '../actions/song_actions';
 
+test('Initial state', () => {	
+	let state;
+  	state = reducers(undefined, {});
+  	expect(state).toEqual({songs:[{artist:'JAY Z',genre:'rap',title:'big Pimpin'}],activeSong:null,data:[]});
+});
 
 test('SELECT_SONG', () => {
   let state;
@@ -17,3 +21,5 @@ test('ADD_SONG', () => {
   state = reducers({songs:[{artist:'JAY Z',genre:'rap',title:'big Pimpin'}],activeSong:null,data:null}, addSong({title:'saaahdude',artist:'dillon',genre:'rap'}));
   expect(state).toEqual({songs:[{artist:'JAY Z',genre:'rap',title:'big Pimpin'},{title:'saaahdude',artist:'dillon',genre:'rap'}],activeSong:null,data:null});
 });
+
+	
