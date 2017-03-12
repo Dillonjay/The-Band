@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1489275921064" clover="3.2.0">
+  <project timestamp="1489275921067" name="All files">
+    <metrics statements="19" coveredstatements="15" conditionals="7" coveredconditionals="5" methods="6" coveredmethods="5" elements="32" coveredelements="25" complexity="0" loc="19" ncloc="19" packages="2" files="7" classes="7">
+      <package name="actions">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <file name="actions.js" path="/Users/DillonJayLundell/Desktop/The-Band/site/app/actions/actions.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+        </file>
+        <file name="select_song_action.js" path="/Users/DillonJayLundell/Desktop/The-Band/site/app/actions/select_song_action.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="4" count="1" type="stmt"/>
+        </file>
+        <file name="song_actions.js" path="/Users/DillonJayLundell/Desktop/The-Band/site/app/actions/song_actions.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="4" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="reducers">
+        <metrics statements="15" coveredstatements="11" conditionals="7" coveredconditionals="5" methods="4" coveredmethods="3"/>
+        <file name="active_song_reducer.js" path="/Users/DillonJayLundell/Desktop/The-Band/site/app/reducers/active_song_reducer.js">
+          <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+          <line num="2" count="4" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="7" count="4" type="stmt"/>
+        </file>
+        <file name="add_some_data_reducer.js" path="/Users/DillonJayLundell/Desktop/The-Band/site/app/reducers/add_some_data_reducer.js">
+          <metrics statements="4" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+          <line num="2" count="4" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="7" count="4" type="stmt"/>
+        </file>
+        <file name="index.js" path="/Users/DillonJayLundell/Desktop/The-Band/site/app/reducers/index.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="6" count="1" type="stmt"/>
+        </file>
+        <file name="songs_reducer.js" path="/Users/DillonJayLundell/Desktop/The-Band/site/app/reducers/songs_reducer.js">
+          <metrics statements="6" coveredstatements="4" conditionals="3" coveredconditionals="2" methods="2" coveredmethods="1"/>
+          <line num="3" count="4" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="11" count="4" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

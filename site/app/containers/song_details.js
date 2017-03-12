@@ -37,4 +37,7 @@ function mapStateToProps(state) {
     }; 
 }
 
+// Component not wrapped in redux for testing purposes. 
+export const Unwrapped = SongDetails;
+
 export default connect(mapStateToProps)(SongDetails);
