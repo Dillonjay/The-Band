@@ -1,0 +1,42 @@
+exports[`test SongList Snapshot Test 1`] = `
+<div>
+  <button
+    onClick={[Function bound goToDetails]}>
+    Async call with redux boyyyy
+  </button>
+  <Connect(AddSong) />
+  <ul>
+    <li
+      onClick={[Function onClick]}>
+      <Link
+        activeClassName=""
+        activeOnlyWhenExact={false}
+        activeStyle={Object {}}
+        className=""
+        isActive={[Function isActive]}
+        replace={false}
+        style={Object {}}
+        to="hello">
+        Bird
+      </Link>
+    </li>
+    <li
+      onClick={[Function onClick]}>
+      <Link
+        activeClassName=""
+        activeOnlyWhenExact={false}
+        activeStyle={Object {}}
+        className=""
+        isActive={[Function isActive]}
+        replace={false}
+        style={Object {}}
+        to="hello">
+        Pimpin
+      </Link>
+    </li>
+  </ul>
+  <button>
+    Async call with redux boyyyy
+  </button>
+</div>
+`;

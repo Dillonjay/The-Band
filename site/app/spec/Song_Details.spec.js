@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, render } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import { Provider } from 'react-redux';
 import store from '../store';
-import { Unwrapped as UnwrappedSongDetails } from '../containers/song_details';
-import selectSong from '../actions/select_song_action';
+import SongDetails, { Unwrapped as UnwrappedSongDetails } from '../containers/song_details';
+import { selectSong } from '../actions/select_song_action';
 
 test('SongDetails Snapshot Test With Song', () => {
 	const component = shallow(<UnwrappedSongDetails song={ {title: 'Bird', artist: 'Anderson Paak', genre: 'hiphop'} } /> );
@@ -12,12 +12,13 @@ test('SongDetails Snapshot Test With Song', () => {
 	expect(tree).toMatchSnapshot();
 })
 
-test('SongDetails Snapshot Test No Song', () => {
-	const component = shallow( <UnwrappedSongDetails /> );
-	const tree = shallowToJson( component );
-	expect(tree).toMatchSnapshot();
+test('Should Display Selected Song Details', () => {
+	const song = {title: 'Bird', artist: 'Anderson Paak', genre: 'hiphop'};
+	store.dispatch(selectSong(song));
+	const component = render(
+		<Provider store={ store }>
+			<SongDetails />	
+		</Provider>
+	)
+	expect(component.find('h1').text()).toEqual('Bird')
 })
-
-// test('Should Display Selected Song Details', () => {
-// 	const song = {title: 'Bird', artist: 'Anderson Paak', genre: 'hiphop'}
-// })
