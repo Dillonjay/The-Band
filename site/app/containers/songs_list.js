@@ -66,6 +66,8 @@ function matchDispatchToProps(dispatch) {
     return bindActionCreators({ selectSong, bang }, dispatch)
 }
 
+export const Unwrapped = SongList;
+
 export default connect(mapStateToProps, matchDispatchToProps)(SongList);
 
 
