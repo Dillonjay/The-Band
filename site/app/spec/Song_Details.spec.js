@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, render } from 'enzyme';
+import { shallow, render, mount } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 import { Provider } from 'react-redux';
 import store from '../store';
@@ -21,4 +21,9 @@ test('Should Display Selected Song Details', () => {
 		</Provider>
 	)
 	expect(component.find('h1').text()).toEqual('Bird')
+})
+
+test('Test test', () => {
+	const component = shallow(<UnwrappedSongDetails song={ {title: 'Bird', artist: 'Anderson Paak', genre: 'hiphop'} } /> );
+	console.log(component)
 })
